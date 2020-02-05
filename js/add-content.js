@@ -1,18 +1,20 @@
-
-function thetime () {
-    // the input
-    var hourNow = prompt ("Please enter the time ,enter betwwen 0-24");
-    var greeting;
-    // the proccess
-    if (hourNow >= 18 && hourNow <= 24 ) {
-        greeting= 'Good evening!';
-        }else if (hourNow >= 12 && hourNow < 18) {
-        greeting = ' Good afternoon!';
-        }else if (hourNow >= 0 && hourNow < 12) {
-        greeting = 'Good morning!';
-        }
-        // the output
-        return greeting; 
+var shownorder = function(){
+    var userorder;
+var numberofimage;
+var orderimage = '';
+while ( userorder !== "house" && userorder !== "hotel"){
+    userorder = prompt("please enter house or hotel ?")
+    numberofimage = prompt("how many image do you want ?")
+for (var i = 0 ; i < numberofimage ; i++){
+    console.log("index is " + i);
+    if ( userorder === "hotel"){
+        orderimage = orderimage + '<img src="images/hotel.png">';
+    }else if ( userorder === "house"){
+        orderimage = orderimage + '<img src="images/house.png">';
+    }console.log(orderimage);
+    
+}return orderimage;
 }
- var greeting = thetime();
- document.write ( ' <h3>' + greeting + ' </ h3> ');
+}
+document.write ('<p>' + shownorder() + '<p>');
+
