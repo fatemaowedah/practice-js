@@ -2,11 +2,11 @@
 function thetime () {
     // the input
     var hourNow = prompt ("Please enter the time ,enter betwwen 0-24");
-    var greeting ="greeting";
+    var greeting;
     // the proccess
-    if (hourNow >= 18 && hourNow > 24 ) {
+    if (hourNow >= 18 && hourNow < 24 ) {
         greeting= 'Good evening!';
-        }else if (hourNow >= 12 && hourNow > 18) {
+        }else if (hourNow >= 12 && hourNow < 18) {
         greeting = ' Good afternoon!';
         }else if (hourNow >= 0 && hourNow < 12) {
         greeting = 'Good morning!';
@@ -15,4 +15,4 @@ function thetime () {
         return greeting; 
 }
  var hour = thetime();
- document .write( ' <h3>' +hour + ' </ h3> ');
+ document.write ( ' <h3>' +hour + ' </ h3> ');
